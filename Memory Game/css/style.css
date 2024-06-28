@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playwrite+TZ:wght@100..400&family=Tiny5&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 83, 124);
+    color: black;
+    font-weight: 900;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.board {
+    height: 500px;
+    width: 500;
+    background-color: red;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+    font-family: "Playwrite TZ", cursive;
+    transform: rotateY(190deg);
+
+}
+
+.board:hover {
+    cursor: pointer;
+}
+
+.card {
+    height: 100px;
+    width: 100px;
+    background-color: #9cf00a;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+
+}
+
+.card::after {
+    content: "";
+    background-color: #9cf00a;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #9cf00a;
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    cursor: pointer;
+}
